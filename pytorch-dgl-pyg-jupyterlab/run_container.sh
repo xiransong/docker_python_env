@@ -1,4 +1,8 @@
-sudo docker run --rm -it --gpus all --ipc=host \
-  -v /media/xreco/DEV/xiran:/pytorch/xiran \
-  -p 8888:8888 \
-  pytorch-dgl-pyg-jupyterlab:v0 \
+docker run --rm -d --gpus all --ipc=host \
+  -v /home/sxr:/home/sxr \
+  -p 9988:8888 \
+  --name xiran-container \
+  xiransong/pytorch-dgl-pyg-jupyterlab:latest \
+  jupyter lab --notebook-dir='/' --ip='*' \
+  --port=8888 --allow-root --no-browser \
+  --NotebookApp.token='' \

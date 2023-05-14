@@ -1,1 +1,1 @@
-sudo docker build --tag pytorch-dgl-pyg-jupyterlab:v0 .
+docker build --tag xiransong/pytorch-dgl-pyg-jupyterlab:latest .
